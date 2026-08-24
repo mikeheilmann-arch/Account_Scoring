@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AI_Prospect_Value_ARR_Range__c</fullName>
+    <description>Pipeline Potential ARR range from the Account value scoring model; directional for prioritization, not booked or forecast ARR.</description>
+    <inlineHelpText>Pipeline Potential ARR range; directional. Use with MCV, fit, confidence, and evidence for prioritization. Not booked or forecast ARR.</inlineHelpText>
+    <label>AI Prospect Pipeline Potential ARR Range</label>
+    <length>50</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+</CustomField>

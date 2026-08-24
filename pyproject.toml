@@ -1,0 +1,20 @@
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = [
+  "cloud_run_jobs/certifid_account_scoring/tests",
+  "tools/icp_quality_agent",
+]
+pythonpath = ["cloud_run_jobs/certifid_account_scoring"]
+markers = [
+  "private_artifacts: requires approved, non-repository production reconciliation artifacts",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+exclude = ["artifacts", "tmp", ".venv"]
+
+[tool.ruff.lint]
+# The imported production baseline predates repository-wide formatting. Enforce
+# correctness-class rules in CI; broader style cleanup belongs in a separate PR.
+select = ["E9", "F63", "F7", "F82"]

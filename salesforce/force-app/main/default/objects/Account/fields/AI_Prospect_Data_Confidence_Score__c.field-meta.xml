@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AI_Prospect_Data_Confidence_Score__c</fullName>
+    <description>Data hygiene and evidence confidence score for the Account value model.</description>
+    <inlineHelpText>Data hygiene and evidence confidence score for the Account value model.</inlineHelpText>
+    <label>AI Prospect Data Confidence Score</label>
+    <precision>5</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+</CustomField>

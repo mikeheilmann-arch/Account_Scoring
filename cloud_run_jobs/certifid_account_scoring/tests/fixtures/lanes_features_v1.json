@@ -1,0 +1,223 @@
+{
+  "feature_case": {
+    "account_id": "001TESTFEATURE0001",
+    "mapped_link_count": 45,
+    "pages": [
+      {
+        "url": "https://harbor-demo.example/contact",
+        "title": "Contact Harbor Demo",
+        "observed_at": "2026-07-08T12:00:00Z",
+        "text": "Our main office\n100 Harbor Street, Suite 200, Bayview, CA 94105\nJane Doe - Escrow Officer\nWe provide title insurance and escrow services."
+      },
+      {
+        "url": "https://harbor-demo.example/locations/bayview",
+        "title": "Bayview Office",
+        "observed_at": "2026-07-08T12:00:00Z",
+        "text": "Office location\n100 Harbor St., Ste. 200, Bayview, CA 94105\nJane Doe | Escrow Officer"
+      },
+      {
+        "url": "https://harbor-demo.example/locations/lakeside",
+        "title": "Lakeside Office",
+        "observed_at": "2026-07-08T12:00:00Z",
+        "text": "Our branch office\n200 Pine Avenue, Lakeside, CA 94107\nLeon Park - Closing Coordinator\nSettlement services and refinance closings."
+      },
+      {
+        "url": "https://harbor-demo.example/court-resources",
+        "title": "Court Resources",
+        "observed_at": "2026-07-08T12:00:00Z",
+        "text": "County courthouse\n300 Justice Road, Bayview, CA 94102"
+      },
+      {
+        "url": "https://harbor-demo.example/service-areas",
+        "title": "Service Areas",
+        "observed_at": "2026-07-08T12:00:00Z",
+        "text": "Counties served and service areas\n400 Service Lane, Bayview, CA 94109"
+      },
+      {
+        "url": "https://harbor-demo.example/testimonials",
+        "title": "What Our Clients Say",
+        "observed_at": "2026-07-08T12:00:00Z",
+        "text": "Customer story\n500 Client Drive, Bayview, CA 94110\nMorgan Lane - Escrow Officer"
+      },
+      {
+        "url": "https://harbor-demo.example/partners",
+        "title": "Partner Locations",
+        "observed_at": "2026-07-08T12:00:00Z",
+        "text": "Referral partner office\n600 Network Court, Bayview, CA 94111"
+      },
+      {
+        "url": "https://harbor-demo.example/property/42",
+        "title": "Property Listing",
+        "observed_at": "2026-07-08T12:00:00Z",
+        "text": "Subject property address\n800 Listing Boulevard, Bayview, CA 94112"
+      },
+      {
+        "url": "https://harbor-demo.example/attorneys/avery-moss",
+        "title": "Attorney Bio",
+        "observed_at": "2026-07-08T12:00:00Z",
+        "text": "Avery Moss - Attorney\n900 Biography Way, Bayview, CA 94113"
+      },
+      {
+        "url": "https://harbor-demo.example/about",
+        "title": "About",
+        "observed_at": "2026-07-08T12:00:00Z",
+        "text": "Jordan Pike - President\nTaylor Reed\nCopyright Harbor Demo\n700 Footer Road, Bayview, CA 94114"
+      },
+      {
+        "url": "https://harbor-demo.example/privacy",
+        "title": "Privacy",
+        "observed_at": "2026-07-08T12:00:00Z",
+        "text": "Privacy policy\nCopyright Harbor Demo\n700 Footer Road, Bayview, CA 94114"
+      },
+      {
+        "url": "https://harbor-demo.example/resources",
+        "title": "Resources",
+        "observed_at": "2026-07-08T12:00:00Z",
+        "text": "Resources\nCopyright Harbor Demo\n700 Footer Road, Bayview, CA 94114"
+      }
+    ],
+    "expected": {
+      "operating_office_count": 2,
+      "relevant_staff_count": 2,
+      "office_exclusion_codes": [
+        "attorney_bio",
+        "court_or_government",
+        "customer_or_testimonial",
+        "partner_office",
+        "property_or_listing",
+        "repeated_footer_without_office_context",
+        "service_area"
+      ],
+      "staff_categories": {
+        "avery moss": "legal_professional_non_operational",
+        "jane doe": "relevant_operational",
+        "jordan pike": "generic_employee_non_operational",
+        "leon park": "relevant_operational",
+        "morgan lane": "excluded_context",
+        "taylor reed": "unverified_name"
+      }
+    }
+  },
+  "lane_cases": [
+    {
+      "id": "title_operator",
+      "account_name": "Harbor Closing Group",
+      "crm_company_type": "Title Company",
+      "billing_state": "CA",
+      "text": "We provide title insurance, escrow services, settlement services, and closing services for buyers and lenders.",
+      "expected_lane": "title_escrow",
+      "expected_subtype": "title_escrow_settlement_operator",
+      "expected_eligible": true
+    },
+    {
+      "id": "legal_closing_arm",
+      "account_name": "Juniper Legal Group",
+      "crm_company_type": "Law firm",
+      "billing_state": "CA",
+      "text": "Practice areas include family law, probate, and personal injury. Our closing attorneys handle real estate closings and refinance closings.",
+      "expected_lane": "legal",
+      "expected_subtype": "general_practice_meaningful_re_closing_arm",
+      "expected_eligible": true
+    },
+    {
+      "id": "legal_affiliated_title",
+      "account_name": "Cedar Law Offices",
+      "crm_company_type": "Law firm",
+      "billing_state": "VA",
+      "text": "Our affiliated title company supports the firm's real estate closings and registered settlement agents.",
+      "expected_lane": "legal",
+      "expected_subtype": "affiliated_title_entity",
+      "expected_eligible": true
+    },
+    {
+      "id": "legal_state_review",
+      "account_name": "Bluebird Counsel Group",
+      "crm_company_type": "Law firm",
+      "billing_state": "NY",
+      "text": "Welcome to our firm. Contact us to discuss your matter.",
+      "expected_lane": "legal",
+      "expected_subtype": "state_market_review",
+      "expected_eligible": false
+    },
+    {
+      "id": "legal_non_closing",
+      "account_name": "Aspen Law Firm",
+      "crm_company_type": "Law firm",
+      "billing_state": "CA",
+      "text": "We practice criminal defense, immigration, personal injury, and family law.",
+      "expected_lane": "legal",
+      "expected_subtype": "non_closing_legal",
+      "expected_eligible": false
+    },
+    {
+      "id": "underwriter",
+      "account_name": "Summit Title Underwriters",
+      "crm_company_type": "Title Company",
+      "billing_state": "TX",
+      "text": "We are a national title insurance underwriter supporting independent agencies.",
+      "expected_lane": "title_escrow",
+      "expected_subtype": "underwriter",
+      "expected_eligible": false
+    },
+    {
+      "id": "owned_direct",
+      "account_name": "Ridgeline Title",
+      "crm_company_type": "Title Company",
+      "billing_state": "FL",
+      "text": "This is a direct operation wholly owned by a title insurance underwriter. We provide title insurance.",
+      "expected_lane": "title_escrow",
+      "expected_subtype": "owned_direct",
+      "expected_eligible": false
+    },
+    {
+      "id": "brokerage_affiliated",
+      "account_name": "Meadow Escrow",
+      "crm_company_type": "Escrow",
+      "billing_state": "AZ",
+      "text": "An affiliated business arrangement owned by Meadow Realty. We provide escrow services and settlement services.",
+      "expected_lane": "title_escrow",
+      "expected_subtype": "brokerage_affiliated",
+      "expected_eligible": false
+    },
+    {
+      "id": "abstract_only",
+      "account_name": "Prairie Abstract",
+      "crm_company_type": "Abstract",
+      "billing_state": "KS",
+      "text": "Our abstracting and title search teams prepare certified property abstracts for clients.",
+      "expected_lane": "title_escrow",
+      "expected_subtype": "abstract_only",
+      "expected_eligible": false
+    },
+    {
+      "id": "adjacent_vendor",
+      "account_name": "Workflow Lantern",
+      "crm_company_type": "Vendor",
+      "billing_state": "WA",
+      "text": "Our software and technology platform helps title agencies automate documents.",
+      "expected_lane": "adjacent",
+      "expected_subtype": "adjacent_software_vendor",
+      "expected_eligible": false
+    },
+    {
+      "id": "adjacent_bank",
+      "account_name": "Valley Community Bank",
+      "crm_company_type": "Bank",
+      "billing_state": "OR",
+      "text": "A community bank providing mortgage lending. Borrowers may need title insurance before closing.",
+      "expected_lane": "adjacent",
+      "expected_subtype": "adjacent_bank_credit_union",
+      "expected_eligible": false
+    },
+    {
+      "id": "ambiguous_title",
+      "account_name": "Compass Title Research",
+      "crm_company_type": "Other",
+      "billing_state": "CO",
+      "text": "Welcome. Learn more about our company and contact us.",
+      "expected_lane": "title_escrow",
+      "expected_subtype": "ambiguous",
+      "expected_eligible": false
+    }
+  ]
+}

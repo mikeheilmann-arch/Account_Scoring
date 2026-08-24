@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AI_Prospect_Value_Updated_At__c</fullName>
+    <description>Timestamp when the Account value score was last produced or written.</description>
+    <inlineHelpText>Timestamp when the Account value score was last produced or written.</inlineHelpText>
+    <label>AI Prospect Value Updated At</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

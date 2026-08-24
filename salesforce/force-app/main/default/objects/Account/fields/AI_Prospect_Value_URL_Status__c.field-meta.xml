@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AI_Prospect_Value_URL_Status__c</fullName>
+    <description>URL preflight or hygiene status used by the Account value scoring model.</description>
+    <inlineHelpText>URL preflight or hygiene status used by the Account value scoring model.</inlineHelpText>
+    <label>AI Prospect Value URL Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value><fullName>ok</fullName><default>false</default><label>OK</label></value>
+            <value><fullName>blocked</fullName><default>false</default><label>Blocked</label></value>
+            <value><fullName>dns_error</fullName><default>false</default><label>DNS Error</label></value>
+            <value><fullName>timeout</fullName><default>false</default><label>Timeout</label></value>
+            <value><fullName>ssl_error</fullName><default>false</default><label>SSL Error</label></value>
+            <value><fullName>server_error</fullName><default>false</default><label>Server Error</label></value>
+            <value><fullName>parked_or_placeholder</fullName><default>false</default><label>Parked or Placeholder</label></value>
+            <value><fullName>parked_or_for_sale</fullName><default>false</default><label>Parked or For Sale</label></value>
+            <value><fullName>suspended_or_inactive</fullName><default>false</default><label>Suspended or Inactive</label></value>
+            <value><fullName>redirects_unrelated</fullName><default>false</default><label>Redirects Unrelated</label></value>
+            <value><fullName>no_url</fullName><default>false</default><label>No URL</label></value>
+            <value><fullName>error</fullName><default>false</default><label>Error</label></value>
+            <value><fullName>not_run</fullName><default>false</default><label>Not Run</label></value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

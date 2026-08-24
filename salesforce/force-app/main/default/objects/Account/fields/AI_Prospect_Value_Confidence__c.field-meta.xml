@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AI_Prospect_Value_Confidence__c</fullName>
+    <description>Confidence bucket for the Account value scoring output.</description>
+    <inlineHelpText>Confidence bucket for the Account value scoring output.</inlineHelpText>
+    <label>AI Prospect Value Confidence</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value><fullName>High</fullName><default>false</default><label>High</label></value>
+            <value><fullName>Medium</fullName><default>false</default><label>Medium</label></value>
+            <value><fullName>Low</fullName><default>false</default><label>Low</label></value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

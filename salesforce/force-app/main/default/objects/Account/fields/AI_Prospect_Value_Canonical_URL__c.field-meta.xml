@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AI_Prospect_Value_Canonical_URL__c</fullName>
+    <description>Canonical or final URL used for Account value scoring.</description>
+    <inlineHelpText>Canonical or final URL used for Account value scoring.</inlineHelpText>
+    <label>AI Prospect Value Canonical URL</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Url</type>
+</CustomField>

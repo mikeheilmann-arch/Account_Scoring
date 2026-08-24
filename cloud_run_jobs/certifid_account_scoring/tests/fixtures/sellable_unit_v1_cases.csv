@@ -1,0 +1,18 @@
+Case,Id,Type,Account_Status__c,Company_Type__c,Active_Customer__c,Active_Subscription_Revenue__c,ParentId,RelationshipType,CentrallyBilled,IndependentBuyingUnit,DBAOfAccountId,BranchOfAccountId,OwnedDirect,UnderwriterParentAccountId,IsDuplicateLoser,DuplicateSurvivorId,DedupeMatchConfidence,SharedDomainAccountIds,DomainCustomerAccountIds,MemberAccountIds,BindingStatus,BindingConfidence,ExpectedLifecycle,ExpectedRelationship,ExpectedSurvivor,ExpectedEligible
+independent_net_new,S001,Prospect,,Title company,false,0,,,,,,,,,,,,,,,bound,High,net_new,independent,S001,true
+active_customer,S002,Prospect,Active Customer,Title company,true,12000,,,,,,,,,,,,,,,bound,High,active_customer,active_customer,S002,false
+churned_winback,S003,Customer,Churned Customer,Title company,false,0,,,,,,,,,,,,,,,bound,High,winback,churned_winback,S003,false
+verified_duplicate_loser,S004,Prospect,,Title company,false,0,,,,,,,,,true,S900,High,,,,bound,High,net_new,duplicate_loser,S900,false
+shared_domain_only,S005,Prospect,,Title company,false,0,,,,,,,,,,,Low,S700|S701,,,bound,High,net_new,shared_domain_only_review,S005,false
+central_child,S006,Prospect,,Title company,false,0,S800,subsidiary,true,false,,,,,,,,,,,bound,High,net_new,non_independent_child,S800,false
+independent_child,S007,Prospect,,Title company,false,0,S801,subsidiary,false,true,,,,,,,,,,,bound,High,net_new,independent_child,S007,true
+parent_link_review,S008,Prospect,,Title company,false,0,S802,subsidiary,false,false,,,,,,,,,,,bound,High,net_new,parent_child_review,S008,false
+dba_alias,S009,Prospect,,Title company,false,0,S803,dba,false,false,S803,,,,,,,,,,bound,High,net_new,dba_alias,S803,false
+independent_dba,S010,Prospect,,Title company,false,0,S804,dba,false,true,S804,,,,,,,,,,bound,High,net_new,independent_dba,S010,true
+branch_location,S011,Prospect,,Title company,false,0,S805,branch,false,false,,S805,,,,,,,,,bound,High,net_new,branch_location,S805,false
+owned_direct,S012,Prospect,,Title company,false,0,S806,underwriter owned direct,false,false,,,true,S806,,,,,,,bound,High,net_new,owned_direct_operation,S806,false
+partner,S013,Partner,,Partner,false,0,,,,,,,,,,,,,,,bound,High,partner,independent,S013,false
+shared_customer_domain,S014,Prospect,,Title company,false,0,,,,,,,,,,,Low,,S990,,bound,High,net_new,shared_domain_customer_review,S014,false
+active_subscription,S015,Prospect,,Title company,false,4500,,,,,,,,,,,,,,,bound,High,active_customer,active_customer,S015,false
+binding_review,S016,Prospect,,Title company,false,0,,,,,,,,,,,,,,,ambiguous,Medium,net_new,independent,S016,false
+unverified_duplicate_hint,S017,Prospect,,Title company,false,0,,,,,,,,,false,S901,Low,S901,,,bound,High,net_new,shared_domain_only_review,S017,false

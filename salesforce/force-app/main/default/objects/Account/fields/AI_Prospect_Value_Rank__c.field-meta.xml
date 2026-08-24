@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AI_Prospect_Value_Rank__c</fullName>
+    <description>Global prospect rank within the model version and run id.</description>
+    <inlineHelpText>Global prospect rank within the model version and run id. Do not compare ranks across model versions without the run id.</inlineHelpText>
+    <label>AI Prospect Value Rank</label>
+    <precision>5</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+</CustomField>

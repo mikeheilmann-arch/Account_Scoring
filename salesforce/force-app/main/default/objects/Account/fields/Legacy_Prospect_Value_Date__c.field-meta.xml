@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Legacy_Prospect_Value_Date__c</fullName>
+    <description>Date parsed from the legacy Dust prospect value note.</description>
+    <inlineHelpText>Date parsed from the legacy Dust prospect value note.</inlineHelpText>
+    <label>Legacy Prospect Value Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

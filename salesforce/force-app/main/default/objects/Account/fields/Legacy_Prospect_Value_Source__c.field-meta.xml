@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Legacy_Prospect_Value_Source__c</fullName>
+    <description>Source of the legacy prospect value tier snapshot.</description>
+    <inlineHelpText>Source of the legacy prospect value tier snapshot.</inlineHelpText>
+    <label>Legacy Prospect Value Source</label>
+    <length>80</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+</CustomField>

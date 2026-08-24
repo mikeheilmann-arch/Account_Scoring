@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AI_Prospect_Value_Source__c</fullName>
+    <description>Source artifact or process that produced the latest Account value score.</description>
+    <inlineHelpText>Source artifact or process that produced the latest Account value score.</inlineHelpText>
+    <label>AI Prospect Value Source</label>
+    <length>80</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+</CustomField>

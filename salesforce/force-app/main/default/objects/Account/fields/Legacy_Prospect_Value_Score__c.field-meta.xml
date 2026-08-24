@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Legacy_Prospect_Value_Score__c</fullName>
+    <description>Ordinal numeric score derived from the legacy Dust prospect value tier for side-by-side reporting.</description>
+    <inlineHelpText>Ordinal numeric score derived from the legacy Dust prospect value tier for side-by-side reporting.</inlineHelpText>
+    <label>Legacy Prospect Value Score</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+</CustomField>

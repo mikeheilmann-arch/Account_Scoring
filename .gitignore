@@ -1,0 +1,57 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.key
+credentials*.json
+service-account*.json
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+htmlcov/
+.coverage
+
+# Salesforce and local CLIs
+.sf/
+.sfdx/
+.g_gremlin/
+
+# IDE and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Generated/private data
+artifacts/
+tmp/
+.tmp/
+output/
+outputs/
+data/
+private/
+raw/
+cache/
+*.log
+*.sqlite*
+
+# Salesforce bulk and publication artifacts
+*-success-records.csv
+*-failed-records.csv
+*payload*.csv
+*backup*.json
+*rollback*.csv
+*ledger*.csv
+*readback*.json
+
+# Licensed source exports
+alta_*.csv
+alta_*.json
